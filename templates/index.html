@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Student</title>
+    <style>
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			background-color: #f0f0f0;
+			font-family: sans-serif;
+		}
+
+		.card {
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			padding: 20px;
+			max-width: 600px;
+			width: 100%;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		form label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		form input[type="text"],
+		form input[type="number"],
+		form input[type="file"] {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			font-size: 16px;
+			box-sizing: border-box;
+		}
+
+		form input[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			padding: 10px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+
+		form input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+
+		.section {
+			margin-top: 50px;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			max-width: 600px;
+			width: 100%;
+		}
+		.div_section {
+			margin-top: 50px;
+			margin-left: 80px;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			max-width: 600px;
+			width: 100%;
+		}
+
+		.section h2 {
+			margin-bottom: 20px;
+		}
+		button[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			padding: 10px;
+			margin-top: 25px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+
+			button[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+		form select[name="course"],
+        form select[name="session"],
+        form select[name="semester"]{
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 11.5L3.5 7H12.5L8 11.5Z" fill="%23333"/><path d="M8 4.5L12.5 9H3.5L8 4.5Z" fill="%23333"/></svg>');
+            background-repeat: no-repeat;
+            background-position: calc(100% - 8px) center;
+            background-size: 12px;
+        }
+
+	</style>
+
+</head>
+<body>
+	<div class="card">
+		<h1>Register Student</h1>
+		<form method="POST" action="/add" enctype="multipart/form-data">
+    <label>Student ID:</label>
+    <input type="text" name="student_id">
+    <label>Name:</label>
+    <input type="text" name="name">
+    <label>Course:</label>
+    <select name="course">
+        <option value="" disabled selected>--Select course--</option>
+        <option value="B.Tech Computer Eng.">Computer Engineering</option>
+        <option value="B.Tech Electrical Eng.">Electrical Engineering</option>
+        <option value="B.Tech Mechanical Eng.">Mechanical Engineering</option>
+        <option value="B.Tech Civil Eng.">Civil Engineering</option>
+        <option value="BCA">BCA</option>
+        <option value="MCA">MCA</option>
+        <option value="BBA">BBA</option>
+        <option value="MBA">MBA</option>
+        <option value="BSC(Phy) Hons ">BSC(Phy) Hons. </option>
+        <option value="BSC(Che) Hons">BSC(Che) Hons. </option>
+        <option value="BSC(Match) Hons">BSC(Math) Hons. </option>
+        <option value="MSC(Phy) Hons ">MSC(Phy) Hons. </option>
+        <option value="MSC(Che) Hons">MSC(Che) Hons. </option>
+        <option value="MSC(Match) Hons">MSC(Math) Hons. </option>
+
+    </select>
+    <label>Semester:</label>
+     <select name="semester">
+         <option value="" disabled selected>--Select Semester--</option>
+         <option value="1">1</option>
+         <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+         <option value="5">5</option>
+         <option value="6">6</option>
+         <option value="7">7</option>
+         <option value="8">8</option>
+     </select>
+    <label>Session:</label>
+    <select name="session">
+        <option value="" disabled selected>--Select Session--</option>
+        <option value="2019-22">2019-22</option>
+        <option value="2019-21">2019-21</option>
+        <option value="2019-24">2019-24</option>
+        <option value="2020-22">2020-22</option>
+        <option value="2020-23">2020-23</option>
+        <option value="2020-24">2020-24</option>
+        <option value="2021-23">2021-23</option>
+        <option value="2021-24">2021-24</option>
+        <option value="2021-25">2021-25</option>
+        <option value="2022-24">2022-24</option>
+        <option value="2022-25">2022-25</option>
+        <option value="2022-26">2022-26</option>
+    </select>
+    <label>Photo:</label>
+    <input type="file" name="image">
+    <input type="submit" value="Submit">
+</form>
+	</div>
+
+	<div class="div_section" id="start">
+		<h2>Face Recognition Attendance System</h2>
+		<form method="get" action="/start">
+			<button type="submit">Start Attendance</button>
+	    </form>
+	  	<form method="get" action="/stop">
+			<button type="submit">Close System </button>
+     	</form>
+	</div>
+</body>
+<script>
+        const form = document.querySelector('form');
+        const inputs = form.querySelectorAll('input[type="text"]');
+        form.addEventListener('submit', (event) => {
+            let empty = false;
+            inputs.forEach(input => {
+                if (!input.value) {
+                empty = true;
+                }
+            });
+        if (empty) {
+            event.preventDefault();
+            alert('Please fill in all the fields');
+        }
+    });
+    </script>
+</html>
